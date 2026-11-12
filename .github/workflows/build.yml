@@ -18,7 +18,12 @@ jobs:
         with:
           gradle-version: 8.9
       - name: Build Debug APK
-        run: gradle assembleDebug --stacktrace
+        run: |
+          ls -la
+          ls -la app
+          cat settings.gradle.kts
+          gradle projects
+          gradle :app:assembleDebug --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
