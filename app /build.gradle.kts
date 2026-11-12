@@ -1,8 +1,9 @@
-plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-}
 
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+
+}
 android {
     namespace = "com.example.provoicerecorder"
     compileSdk = 34
